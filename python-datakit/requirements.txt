@@ -1,0 +1,7 @@
+# Always the latest
+pdb 
+ipython[all]
+PyYAML
+rodeo
+pylint
+
