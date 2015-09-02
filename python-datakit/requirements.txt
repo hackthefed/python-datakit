@@ -2,6 +2,10 @@
 pdb 
 ipython[all]
 PyYAML
+numpy
+pandas
+scipy
+pillow
 rodeo
 pylint
 

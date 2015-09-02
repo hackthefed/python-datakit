@@ -1,7 +1,7 @@
 datakit:
     image: hackthefed/python-datakit
     hostname: datakit
-    command: /usr/local/bin/ipython notebook --ip=0.0.0.0
+    command: /bin/bash
     tty: true
     stdin_open: true
     volumes:
