@@ -1,0 +1,10 @@
+datakit:
+    image: hackthefed/python-datakit
+    hostname: datakit
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+    volumes:
+        - ../:/data
+    ports:
+        - "8888:8888"
