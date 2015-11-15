@@ -1,5 +1,5 @@
 datakit:
-    image: hackthefed/python-datakit
+    image: hackthefed/python-datakit:latest
     hostname: datakit
     command: /bin/bash
     tty: true
