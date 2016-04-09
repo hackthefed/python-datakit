@@ -47,6 +47,8 @@ yet so they aren't there right now.
     * Pillow
     * ipython[all] - This includes notebook and matplotlib
     * pyYAML
+    * PyTables
+    * hdf5
     * rodeo - cause it looks interesting
     * zsh and oh-my-zsh
 
