@@ -1,7 +1,7 @@
 datakit:
-    image: hackthefed/python-datakit
+    image: hackthefed/python-datakit:latest
     hostname: datakit
-    command: /bin/bash
+    command: sh -c "/usr/local/bin/jupyter notebook --ip=0.0.0.0 --no-browser --notebook-dir=/data"
     tty: true
     stdin_open: true
     volumes:

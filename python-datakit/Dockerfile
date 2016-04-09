@@ -1,4 +1,4 @@
-FROM debian:8
+FROM debian:latest
 
 MAINTAINER vance@hackthefed.org
 
@@ -22,10 +22,11 @@ RUN apt-get install -y ncurses-dev wget curl
 
 # Get our python toolset
 RUN apt-get install -y python3 python3-pip python3-matplotlib python3-pillow
-RUN apt-get install -y liblapack-dev libblas-dev
+RUN apt-get install -y liblapack-dev libblas-dev hdf5-tools python3-tables
 RUN apt-get install -y gfortran
 
 COPY ./requirements.txt requirements.txt
+RUN echo "hello"
 
 RUN pip3 install  -r requirements.txt
 
@@ -33,5 +34,4 @@ VOLUME /data
 
 EXPOSE 8888
 
-#CMD /usr/local/bin/ipython notebook --ip=0.0.0.0
-CMD /bin/bash
+CMD sh -c "/usr/local/bin/jupyter notebook --ip=0.0.0.0 --no-browser --notebook-dir=/data"

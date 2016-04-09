@@ -1,5 +1,5 @@
 # Always the latest
-pdb 
+pdb
 ipython[all]
 PyYAML
 numpy
@@ -8,4 +8,4 @@ scipy
 pillow
 rodeo
 pylint
-
+jupyter
