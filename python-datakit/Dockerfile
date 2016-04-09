@@ -26,7 +26,6 @@ RUN apt-get install -y liblapack-dev libblas-dev hdf5-tools python3-tables
 RUN apt-get install -y gfortran
 
 COPY ./requirements.txt requirements.txt
-RUN echo "hello"
 
 RUN pip3 install  -r requirements.txt
 
