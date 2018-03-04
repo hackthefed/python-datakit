@@ -1,10 +1,12 @@
 datakit:
     image: hackthefed/python-datakit:latest
+    container_name: datakit
     hostname: datakit
-    command: sh -c "/usr/local/bin/jupyter notebook --ip=0.0.0.0 --no-browser --notebook-dir=/data"
+    command: sh -c "/usr/local/bin/jupyter notebook --ip=0.0.0.0 --no-browser --notebook-dir=/data --allow-root"
     tty: true
     stdin_open: true
     volumes:
         - ../:/data
     ports:
         - "8888:8888"
+        - "8889:8889"

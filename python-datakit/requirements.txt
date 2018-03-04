@@ -1,11 +1,10 @@
 # Always the latest
-pdb
-ipython[all]
+ipython
 PyYAML
 numpy
 pandas
 scipy
 pillow
-rodeo
 pylint
 jupyter
+numexpr #==2.6.2

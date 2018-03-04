@@ -45,11 +45,10 @@ yet so they aren't there right now.
     * SciPy
     * NumPy
     * Pillow
-    * ipython[all] - This includes notebook and matplotlib
+    * ipython - This includes matplotlib
     * pyYAML
     * PyTables
     * hdf5
-    * rodeo - cause it looks interesting
     * zsh and oh-my-zsh
 
 **Usage**

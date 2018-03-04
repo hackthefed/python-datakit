@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM debian:9
 
 MAINTAINER vance@hackthefed.org
 
@@ -18,16 +18,25 @@ RUN dpkg-reconfigure locales
 
 
 RUN apt-get install -y mercurial git vim tmux
-RUN apt-get install -y ncurses-dev wget curl
+RUN apt-get install -y ncurses-dev wget curl procps
 
 # Get our python toolset
-RUN apt-get install -y python3 python3-pip python3-matplotlib python3-pillow
+RUN apt-get install -y python3 python3-matplotlib python3-pillow
 RUN apt-get install -y liblapack-dev libblas-dev hdf5-tools python3-tables
 RUN apt-get install -y gfortran
+
+
+RUN curl -Lvo get-pip.py https://bootstrap.pypa.io/get-pip.py \
+    && python3 get-pip.py 
 
 COPY ./requirements.txt requirements.txt
 
 RUN pip3 install  -r requirements.txt
+
+RUN mkdir .matplotlib
+RUN echo "backend: Qt4Agg" > .matplotlib/matplotlibrc
+
+
 
 VOLUME /data
 
